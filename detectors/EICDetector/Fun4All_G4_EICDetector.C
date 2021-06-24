@@ -494,7 +494,10 @@ int Fun4All_G4_EICDetector(
 
   if (Enable::FHCAL_EVAL) FHCAL_Eval(outputroot + "_g4fhcal_eval.root");
 
-  if (Enable::EEMC_EVAL) EEMC_Eval(outputroot + "_g4eemc_eval.root");
+  //  if (Enable::EEMC_EVAL) EEMC_Eval(outputroot + "_g4eemc_eval.root");
+  if (Enable::EEMC_EVAL) EEMC_Eval((outputroot + "_g4eemc_eval_crystal.root"), true);
+
+  if (Enable::EEMC_EVAL) EEMC_Eval((outputroot + "_g4eemc_eval_glass.root"), false);
 
   if (Enable::JETS_EVAL) Jet_Eval(outputroot + "_g4jet_eval.root");
 
